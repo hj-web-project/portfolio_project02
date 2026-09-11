@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+@font-face {
+    font-family: 'Pretendard';
+	src: url('../font/Pretendard-Light.woff2') format('woff2'),
+         url('../font/Pretendard-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+	src: url('../font/Pretendard-Regular.woff2') format('woff2'),
+         url('../font/Pretendard-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+	src: url('../font/Pretendard-Medium.woff2') format('woff2'),
+         url('../font/Pretendard-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+	src: url('../font/Pretendard-SemiBold.woff2') format('woff2'),
+         url('../font/Pretendard-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Pretendard';
+	src: url('../font/Pretendard-Bold.woff2') format('woff2'),
+         url('../font/Pretendard-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+	src: url('../font/Gotham-Book.otf') format('opentype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+	src: url('../font/Gotham-Regular.otf') format('opentype');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+	src: url('../font/Gotham-Medium.otf') format('opentype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+	src: url('../font/Gotham-Bold.otf') format('opentype');
+    font-weight: 600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Gotham';
+	src: url('../font/Gotham Black.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Gotham';
+	src: url('../font/Gotham-Black.otf') format('opentype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+  font-family: 'FuturaL';
+  src: url('../font/FuturaLT-Book.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'rozhaone';
+  src: url('../font/rozha-one.regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+	font-family:'Arial';
+	src:url('../font/Arial-BD.ttf') format('truetype');
+	font-weight:700;
+}
+@font-face {
+	font-family:'Arial';
+	src:url('../font/Arial-BL.ttf') format('truetype');
+	font-weight:900;
+}
+
+@font-face {
+	font-family:'Arial-BL-lt';
+	src:url('../font/Arial-BL-lt.ttf') format('truetype');
+	font-weight:700;
+}
+
+
+
+html {overflow-y:scroll;}
+body {margin:0;padding:0;font-size:0.75em; font-family:'Inter', 'Pretendard', dotum, sans-serif; overflow-x:hidden; }
+html, h1, h2, h3, h4, h5, h6, form, fieldset, img {margin:0;padding:0;border:0}
+h1, h2, h3, h4, h5, h6 {font-size:1em; font-family:'Inter', 'Pretendard',  dotum, sans-serif; }
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {display:block}
+ul {margin:0;padding:0;list-style:none}
+ol,li,dl,dt,dd {margin:0;padding:0} 
+legend {position:absolute;margin:0;padding:0;font-size:0;line-height:0;text-indent:-9999em;overflow:hidden}
+label, input, button, select, img {vertical-align:middle}
+input, button {margin:0;padding:0; font-family:'Inter', 'Pretendard',  dotum, sans-serif; }
+button {cursor:pointer}
+textarea, select {font-family:'Inter', 'Pretendard',  dotum, sans-serif; font-size:1em}
+select {margin:0}
+p {margin:0;padding:0; word-break:keep-all; }
+hr {display:none}
+pre {overflow-x:scroll;font-size:1.1em}
+a {color:#191919;text-decoration:none}
+
+*, :after, :before {
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box;
+}
+
+input[type=text],input[type=password], textarea {
+-webkit-transition:all 0.30s ease-in-out;
+-moz-transition:all 0.30s ease-in-out;
+-ms-transition:all 0.30s ease-in-out;
+-o-transition:all 0.30s ease-in-out;
+outline:none;
+}
+
+.pretendard{font-family:'Pretendard', dotum, sans-serif;}
+.gotham{font-family:'Gotham', dotum, sans-serif;}
+.futura{font-family:'FuturaL', dotum, sans-serif;}
+.rozhaone{font-family:'rozhaone', dotum, sans-serif;}
