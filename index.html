@@ -393,8 +393,6 @@
 			@media (pointer: fine) {
 			.footer .ft-bottom-info-wr li .tit:hover{background:#fff; color:#191919; font-weight: 500;}
 			}
-			
-				
 			</style>
 			<footer class="footer" id="footer">
 				<div class="inner__cen1600">
@@ -403,7 +401,70 @@
 						<h1 class="title">Let's Build<br> Something Great<br> Together.</h1>
 					</div>
 					
-					<div>
+					<!-- modify this form HTML and place wherever you want your form -->
+						<form
+						  action="https://formspree.io/f/mnpqyykv"
+						  method="POST"
+						>
+						  <label>
+							Your email:
+							<input type="email" name="email">
+						  </label>
+						  <label>
+							Your message:
+							<textarea name="message"></textarea>
+						  </label>
+						  <!-- your other form fields go here -->
+						  <button type="submit">Send</button>
+						</form>
+						
+						<p id="form-status"></p>
+						
+						<script>
+						  const form = document.getElementById("my-form");
+						  const status = document.getElementById("form-status");
+						  const button = document.getElementById("submit-btn");
+
+						  form.addEventListener("submit", async function (event) {
+							event.preventDefault(); // 기본 폼 제출(페이지 이동) 방지
+							
+							button.disabled = true;
+							status.innerText = "전송 중...";
+
+							const data = new FormData(form);
+
+							try {
+							  const response = await fetch(form.action, {
+								method: form.method,
+								body: data,
+								headers: {
+								  'Accept': 'application/json'
+								}
+							  });
+
+							  if (response.ok) {
+								status.innerText = "성공적으로 전송되었습니다! 빠르게 답변드릴게요.";
+								form.reset(); // 폼 입력값 초기화
+							  } else {
+								const result = await response.json();
+								if (Object.hasOwn(result, 'errors')) {
+								  status.innerText = result.errors.map(error => error["message"]).join(", ");
+								} else {
+								  status.innerText = "전송 중 오류가 발생했습니다. 다시 시도해 주세요.";
+								}
+							  }
+							} catch (error) {
+							  status.innerText = "네트워크 오류가 발생했습니다. 인터넷 연결을 확인하세요.";
+							} finally {
+							  button.disabled = false;
+							}
+						  });
+						</script>
+
+
+
+					
+					<div class="hide">
 						<ul class="ft-bottom-info-wr">
 							<li>
 								<a href="mailto:hjlee0714@gmail.com" class="tit">EMAIL</a>
