@@ -417,7 +417,7 @@ line-height: 22px; text-align: center; border-radius:24px; padding:0 12px; color
 .project-li-wr .main-btn{margin-top:16px;}
 .project-explan-wr .tit01{font-size:12px;}
 .project-explan-wr .tx01{font-size:12px;}
-.project-explan-wr .tit01 .number{height:20px; line-height:19px; padding:0 8px;}
+.project-explan-wr .tit01 .number{height:20px; line-height:19px; padding:0 8px; font-size:10px;}
 .main-content-wr .project-li-wr .project-li{gap:24px;}
 }/* 570px */
 
