@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	gsap.ticker.lagSmoothing(0);
-// lenis.stop();
-	// document.body.style.height = "100vh";
-	// document.body.style.overflow = "hidden";
+	lenis.stop();
+	document.body.style.height = "100vh";
+ 	document.body.style.overflow = "hidden";
 	
 
 	let mm = gsap.matchMedia();
