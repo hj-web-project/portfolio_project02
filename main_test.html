@@ -1,0 +1,585 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Portfolio</title>
+    <!-- Viewport -->
+    <meta name="viewport" id="meta_viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=10">
+	<meta property="og:image" content="images/w_ogimg.png">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="Portfolio">
+	<meta property="og:description" content="Portfolio">
+	<meta property="og:site_name" content="Portfolio">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<!-- css 셋팅 -->
+	<link rel="stylesheet" href="css/assets.css">
+	<link rel="stylesheet" href="css/common.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+
+    <!-- ScrollOut -->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <!-- Three.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+
+	<script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" />
+	<link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting-cells.css" />
+
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+	<script src="js/main.js"></script>
+	
+</head>
+<body>
+
+
+	<div class="wrap">
+		<main id="main">
+			<!-- 인트로 -->
+			<div class="main-intro-wr h100-center hgt__100vh hide">
+				<div class="top-tx-wr">
+					<p class="tx-style01">LEE HAE JI <br> PORTFOLIO
+					</p>
+				</div>
+				<div class="main-title-wr fill-text">
+					<span class="base-text">사용자가 머무르고 싶은 화면을 만듭니다.</span>
+					<span class="top-text">사용자가 머무르고 싶은 화면을 만듭니다.</span>
+				</div>
+				<div class="bt-tx-wr">
+					<p class="tx-style01">SEOUL, KR</p>
+					<p class="tx-style01 mt08">hjlee0714@gmail.com</p>		
+				</div>
+			</div>
+
+			<canvas id="canvas"></canvas>
+			<script src="js/threejs.js"></script>
+			<div class="fixed-scroll-bottom">
+				<p class="tx-style01">SCROLL</p>
+				<p class="scroll-line-wr"><span class="active-line"></span></p>
+			</div>
+
+			<header class="header">
+				<div class="inner__cen1600">
+					<nav class="main__mnav__wr">
+						<a href="#main-contents-wr00">HOME</a>
+						<a href="#main-contents-wr01">ABOUT</a>
+						<a href="#main-contents-wr02">WORK</a>
+						<a href="#main-contents-wr03">STACK</a>
+						<a href="#main-contents-wr04">CONTACT</a>
+					</nav>
+				</div>
+			</header>
+			<style>
+				.main-intro-title-wr .text{background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0.13) 50%); background-size: 200% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; color: transparent;display: block;}
+				
+			</style>
+		
+
+			<!-- 비주얼 -->
+			<section class="main-content-wr h100-center hgt__100vh" id="main-contents-wr00" data-scroll>
+				<div class="inner__cen1600">
+					<div class="main-intro-title-wr">
+						<h1 class="title tx__ani01" data-splitting>Who</h1>
+						<h1 class="title tx__ani01" data-splitting>I Am</h1>
+						<div class="tx-wr hidden768">
+							<div class="hidden-tx"><p class="text">웹 표준과 접근성을 준수하며, 어떤 환경에서도 결함 없는 사용자 경험을 제공하는 견고한 인터페이스를 구축합니다.</p></div>
+							<div class="hidden-tx"><p class="text">5년의 실무 경험을 통해 구조화된 마크업과 유지보수가 용이한 CSS 설계를 지향하며,</p></div>
+							<div class="hidden-tx"><p class="text">단순한 구현을 넘어 브라우저 성능과 최적화까지 고려한 인터페이스를 만듭니다.</p></div>
+						</div>
+						
+						<div class="tx-wr visible768">
+							<div class="hidden-tx"><p class="text">웹 표준과 접근성을 준수하며, 어떤 환경에서도 결함 없는</p></div>
+							<div class="hidden-tx"><p class="text"> 사용자 경험을 제공하는 견고한 인터페이스를 구축합니다.</p></div>
+							<div class="hidden-tx"><p class="text">5년의 실무 경험을 통해 구조화된 마크업과 유지보수가 용이한 CSS 설계를 지향하며,</p></div>
+							<div class="hidden-tx"><p class="text">단순한 구현을 넘어 브라우저 성능과 최적화까지 고려한 인터페이스를 만듭니다.</p></div>
+						</div>
+						
+					</div>
+				</div>
+			</section>
+			<!-- section01 -->
+			<section class="main-content-wr main-contents-wr01 h100-center hgt__100vh" id="main-contents-wr01">
+				<div class="inner__cen1600">
+					<div class="flex-wr">
+						<div class="main-title-wr">
+							<p class="tit">01 / WHO I AM</p>
+							<div class="img-wr visible1024"><img src="images/leehaeji.jpg" alt="이혜지"></div>
+							<p class="tx01 mt30">웹 개발자 / 프로젝트 리더 이혜지<br>5년 차의 실무 노하우로 설계부터 구현, 완성도 높은 결과물까지 책임집니다.<br><br>
+							안녕하세요, 개발자 이혜지입니다.<br>
+							웹 에이전시에서 5년간 대규모 웹 시스템 구축 및 운영 프로젝트를 다수 완수해 왔습니다.<br>
+							단순 UI/UX 퍼블리싱을 넘어 요구사항 분석, 마크업 구조 설계, CMS 커스터마이징까지<br>
+							프로젝트 전 주기를 주도적으로 리드해 온 경험을 보유하고 있습니다.<br><br>
+							이러한 노하우를 바탕으로 귀사의 프로젝트가 기획 의도에 맞게<br>
+							정확하고 안정적으로 구현될 수 있도록 지원하겠습니다.<br><br>
+							기술적 성취감과 성과를 향한 집요함으로 고객사의 비즈니스 목표를 이해하고,<br>
+							기대 이상의 완성도 높은 웹 서비스를 제공하겠습니다.
+							</p>
+							<p class="tx02 hide"></p>
+							<a href="./resume.html" class="view-btn PlayfairDisplay button button--janus hide"><span>이력서 보기</span></a>
+						</div>
+						<div class="img-wr hidden1024"><img src="images/leehaeji.jpg" alt="이혜지"></div>
+					</div>
+				</div>
+			</section>
+			
+			<section class="main-content-wr main-contents-wr02" id="main-contents-wr02">
+				<div class="inner__cen1600">
+					<div class="main-title-wr">
+						<p class="tit">02 / Selected Works</p>
+					</div>
+					<div class="main-contents-box main-contents-box01">
+						<ul>
+							<li class="project-li-wr">
+								<a href="./project/01.html" class="project-li">
+									<div class="project-img img-wr"><img src="images/project01.png" alt="올빗"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">01</span>New Build</p>
+										<p class="subject">ORBYT</p>
+										<p class="tx01">Responsive Web</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+							<li class="project-li-wr">
+								<a href="./project/02.html" class="project-li reverse">
+									<div class="project-img img-wr"><img src="images/project03.png" alt="플랜에이제트"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">03</span>Web Renewal</p>
+										<p class="subject">PLAN A-Z</p>
+										<p class="tx01">Responsive Web</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+
+							<li class="project-li-wr">
+								<a href="#none" class="project-li">
+									<div class="project-img img-wr"><img src="images/project02.png" alt="비스튜디오"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">02</span>Web Renewal</p>
+										<p class="subject">B-Studio</p>
+										<p class="tx01">Responsive Web</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+							
+							<li class="project-li-wr">
+								<a href="#none" class="project-li reverse">
+									<div class="project-img img-wr"><img src="images/project04-1.png" alt="아이콘플래닝"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">04</span>New Build</p>
+										<p class="subject">ICON PLANNING</p>
+										<p class="tx01">Responsive Web</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+
+			<style>
+			.main-contents-wr03 .stack-li-wr{display:flex; flex-wrap:wrap; gap:60px 30px;}
+			.main-contents-wr03 .stack-li-wr .stack-li{width:calc(33.33% - 20px);}
+			.main-contents-wr03 .stack-li-wr .stack-li .tit{font-size:20px; font-weight: 300; color:#fff; font-family: "Playfair Display", sans-serif; margin-bottom: 24px;
+			position:relative; padding-left: 15px;}
+			.main-contents-wr03 .stack-li-wr .stack-li .tit:before{content:''; display:block; width:2px; height:24px; background:var(--main__color); position:absolute; left:0; top:50%; transform:translateY(-50%);}
+
+			.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr{ display:block; margin-bottom:12px;}
+			.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr .tx01{color:#fff; font-size:16px; font-weight: 400; margin-bottom: 6px;}
+			.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr .tx02{color:#fff; font-size:14px; line-height:1.45; display:block;}
+			
+			.stack-group{display:flex; align-items:center;gap:5px; display:none; }
+			.stack-group span{width:5px; height:5px; border-radius:50%; background:#1f2937; display:block;}
+			.stack-group span.white{background:#fff;}
+			</style>
+
+
+			<section class="main-content-wr main-contents-wr03 h100-center hgt__100vh" id="main-contents-wr03">
+				<div class="inner__cen1600">
+					<div class="main-title-wr">
+						<p class="tit">03 / STACK</p>
+					</div>
+					<div class="main-contents-box main-contents-box01">
+						<ul class="stack-li-wr">
+							<li class="stack-li">
+								<h4 class="tit">Core Publishing</h4>
+								<div class="stack-group-wr">
+									<p class="tx01">HTML5</p>
+									<span class="tx02">- 웹 접근성(WA) 및 시맨틱 태그 구조 설계로 검색엔진 최적화(SEO) 반영</span>
+									<span class="tx02">- 크로스 브라우징 및 다양한 디바이스 환경을 고려한 표준 마크업 작성</span>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx01">CSS3</p>
+									<span class="tx02">- BEM 및 SCSS 활용으로 유지보수가 용이한 모듈화 CSS 구조 설계</span>
+									<span class="tx02">- Flexbox, Grid 기반의 완벽한 반응형 웹(Responsive) 레이아웃 구현</span>
+									<span class="tx02">- GPU 가속 및 Keyframes를 고려한 렌더링 성능 중심의 CSS 애니메이션 작성</span>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx01">JavaScript (ES6+)</p>
+									<span class="tx02">- Vanilla JS 기반의 자유로운 동적 DOM 조작 및 커스텀 UI 인터랙션 구현</span>
+									<span class="tx02">- ES6+ 문법(Arrow Function, Destructuring, Modules) 및 비동기(Async/Await) 처리</span>
+									<span class="tx02"> 외부 API 연동, 데이터 파싱, 이벤트 리스너 최적화 및 상태 관리</span>
+								</div>
+							</li>
+							
+							<li class="stack-li">
+								<h4 class="tit">Interaction 3D</h4>
+								<div class="stack-group-wr">
+									<p class="tx01">GSAP Interaction</p>
+									<span class="tx02">- ScrollTrigger를 활용한 스크롤 연동 시네마틱 타임라인 및 패럴랙스 애니메이션 구현</span>
+									<span class="tx02">- Flip, Observer 등 GSAP 플러그인 기반의 복잡한 UI 모션 및 인터랙션 최적화</span>
+									<span class="tx02">- 프레임 드롭(Lag) 없는 부드러운 60fps 인터랙티브 모션 구현 및 성능 관리</span>
+								</div>
+
+								<div class="stack-group-wr">
+									<p class="tx01">Three.js (3D Object)</p>
+									<span class="tx02">- 3D 모델(GLTF/GLB) 로딩, 라이팅, 카메라 제어 및 캔버스(Canvas) 렌더링 최적화</span>
+									<span class="tx02">- 마우스 커서 및 스크롤 이벤트에 반응하는 3D 오브젝트 인터랙션 개발</span>
+									<span class="tx02">- 텍스처 매핑 및 셰이더 효과를 활용한 브랜딩 중심의 3D 웹 비주얼 구축</span>
+								</div>
+
+								<div class="stack-group-wr">
+									<p class="tx01">WebGL Implementation</p>
+									<span class="tx02">- GPU 가속 기반의 2D/3D 그래픽스 렌더링 및 하드웨어 성능 최적화</span>
+									<span class="tx02">- 커스텀 셰이더(GLSL)를 활용한 픽셀/메시 왜곡 및 비주얼 이펙트 구현</span>
+									<span class="tx02">- 모바일 및 저사양 기기 환경을 고려한 렌더링 부하 제어 및 리소스 관리</span>
+								</div>
+							</li>
+							
+							
+							
+							<li class="stack-li">
+								<h4 class="tit">Interaction 3D</h4>
+								<div class="stack-group-wr">
+									<p class="tx">GSAP Interaction</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+									</div>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx">Three.js (3D Object)</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class=""></span>
+									</div>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx">WebGL Implementation</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class=""></span>
+									</div>
+								</div>
+							</li>
+							<li class="stack-li">
+								<h4 class="tit">Design Tools</h4>
+								<div class="stack-group-wr">
+									<p class="tx">Figma</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+									</div>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx">Adobe XD</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+									</div>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx">Photoshop / Illustrator</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class=""></span>
+									</div>
+								</div>
+							</li>
+
+							<li class="stack-li">
+								<h4 class="tit">Standard Quality</h4>
+								<div class="stack-group-wr">
+									<p class="tx">Web Accessibility</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+									</div>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx">Web Standards</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+									</div>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx">Responsive Web</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+									</div>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx">Cross Browsing</p>
+									<div class="stack-group">
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+										<span class="white"></span>
+									</div>
+								</div>
+							</li>
+							
+							<li class="stack-li">
+								<h4 class="tit">Cafe24 & Commerce</h4>
+								<div class="stack-group-wr">
+									<p class="tx01">Cafe24 Smart Mode / Pro Mode</p>
+									<span class="tx02">- 카페24 디자인 스킨 커스터마이징 및 C-Module(모듈) 구조 설계</span>
+									<span class="tx02">- 스마트 디자인 HTML/CSS/JS 코드 분석 및 자유로운 개편</span>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx01">Cafe24 API & Script Customizing</p>
+									<span class="tx">외부 스크립트(픽셀, 트래킹 코드 등) API 연동</span>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx01">PG & External Service Integration</p>
+									<span class="tx">PG사(이니시스, 토스페이먼츠 등) 결제 연동 및 네이버페이, 카카오페이 등 간편결제 설정</span>
+									<span class="tx">카카오 알림톡, 배송 추적, 솔루션 연동</span>
+								</div>
+								<div class="stack-group-wr">
+									<p class="tx01">SEO & Analytics for E-Commerce</p>
+									<span class="tx">쇼핑몰 검색엔진 최적화(메타태그, 네이버/구글 쇼핑 피드 연동)</span>
+									<span class="tx">GA4(구글 애널리틱스), 메타 픽셀 등 마케팅 트래킹 스크립트 삽입 및 전환 데이터 추적</span>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</section>
+			
+
+			<section class="hide main-content-wr main-contents-wr04" id="main-contents-wr04">
+				<div class="inner__cen1600">
+					<div class="main-title-wr">
+						<p class="tit">04 / CONTACT</p>
+						<p class="title">Let's Build<br> Something Great<br> Together</p>
+						<p class="tx01 mt40">인터랙티브 웹과 경험을 갖춘 웹 퍼블리셔입니다.<br>
+						제 역량이 필요한 곳이라면 어디든 환영입니다.</p>
+					</div>
+				</div>
+			</section>
+			<style>
+			.footer{padding:0 0 80px;}
+			.footer .main-title-wr .title{font-family: 'Inter', 'Pretendard', dotum, sans-serif; font-size: 90px; line-height: 1.12; font-weight: 800;
+				text-transform: uppercase; letter-spacing:-1px;}
+			
+			.footer .ft-bottom-info-wr{display:flex;}
+			.footer .ft-bottom-info-wr li{width:33.33%; }
+			.footer .ft-bottom-info-wr li .tit{font-size:50px; font-weight:600; margin-bottom: 16px; display: inline-block; color:#fff; text-align: center;}
+			.footer .ft-bottom-info-wr li .text02{font-size:18px; font-weight:400; color:#fff; display:block;}
+			.footer .main-title-wr{margin-bottom: 180px;}
+			
+			@media (pointer: fine) {
+			.footer .ft-bottom-info-wr li .tit:hover{background:#fff; color:#191919; font-weight: 500;}
+			}
+			
+				
+			</style>
+			<footer class="footer" id="footer">
+				<div class="inner__cen1600">
+					<div class="main-title-wr talign__center">
+						<p class="tit mb30">04 / CONTACT</p>
+						<h1 class="title">Let's Build<br> Something Great<br> Together.</h1>
+					</div>
+					
+					<div>
+						<ul class="ft-bottom-info-wr">
+							<li>
+								<a href="mailto:hjlee0714@gmail.com" class="tit">EMAIL</a>
+							</li>
+							<li class="talign__center">
+								<a href="#" class="tit">GITHUB</a>
+							</li>
+							<li class="talign__right">
+								<a href="./resume.html" class="tit">RESUME</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</footer>
+			
+			<script>
+				$(function() {
+					var SCRAMBLE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""); 
+					var CHAR_DELAY = 60;  
+					var TICK_SPEED = 32;  
+
+					function getRandomChar() {
+						return SCRAMBLE_LETTERS[Math.floor(Math.random() * SCRAMBLE_LETTERS.length)];
+					}
+
+					function clearScrambleTimers($el) {
+						var timers = $el.data("scrambleTimers");
+						if (!timers) return;
+						(timers.timeouts || []).forEach(function(id) { clearTimeout(id); });
+						(timers.intervals || []).forEach(function(id) { clearInterval(id); });
+						$el.removeData("scrambleTimers");
+					}
+
+					function playScramble($el, finalText) {
+						var domElement = $el[0];
+						
+						var displayArray = finalText.split("").map(function() { return getRandomChar(); });
+
+						function render() {
+							domElement.textContent = displayArray.join("");
+						}
+						render();
+
+						var currentTimers = { timeouts: [], intervals: [] };
+
+						finalText.split("").forEach(function(targetChar, index) {
+							var timeoutId = setTimeout(function() {
+								var frame = 0;
+								var maxFrames = 3 + index * 2; 
+
+								var intervalId = setInterval(function() {
+									frame++;
+									displayArray[index] = getRandomChar();
+									render();
+
+									if (frame >= maxFrames) {
+										clearInterval(intervalId);
+										displayArray[index] = targetChar; 
+										render();
+									}
+								}, TICK_SPEED);
+
+								currentTimers.intervals.push(intervalId);
+							}, index * CHAR_DELAY);
+
+							currentTimers.timeouts.push(timeoutId);
+						});
+
+						$el.data("scrambleTimers", currentTimers);
+					}
+
+					var $scrambleTargets = $(".ft-bottom-info-wr .tit"); 
+
+					$scrambleTargets.each(function() {
+						var $tit = $(this);
+						
+						var cleanText = $tit.text().trim();
+						$tit.data("originLabel", cleanText);
+						$tit.text(cleanText); 
+
+						var currentWidth = Math.ceil($tit.outerWidth()) + 20;
+
+						$tit.css({
+							"display": "inline-block",
+							"width": currentWidth + "px",
+							"font-variant-numeric": "tabular-nums", 
+							"text-transform": "uppercase"          
+						});
+					});
+
+					$scrambleTargets.on("mouseenter", function() {
+						var $tit = $(this);
+						var label = $tit.data("originLabel");
+						if (!label) return;
+
+						clearScrambleTimers($tit);
+						playScramble($tit, label);
+					});
+
+					$scrambleTargets.on("mouseleave", function() {
+						var $tit = $(this);
+						clearScrambleTimers($tit);
+						
+						var label = $tit.data("originLabel");
+						if (label) $tit.text(label); 
+					});
+				});
+				
+			</script>
+		</main>
+	</div>
+
+	<script>
+		$(function(){
+			ScrollOut({once: 'true',});
+			Splitting();
+		});
+		
+		$(window).scroll(function(event){
+			var scTop = $(this).scrollTop();
+			var winHeight = $(window).height();
+			var docHeight = $(document).height();
+			
+			// 계산의 정확도를 위해 소수점을 올림(Math.ceil) 처리합니다.
+			// 브라우저 줌(Zoom)이나 모바일 환경에서 1px 미만의 오차로 바닥 감지가 안 되는 것을 방지합니다.
+			if (Math.ceil(scTop + winHeight) >= docHeight) {
+				// 화면 맨 밑바닥에 닿았을 때
+				$(".fixed-scroll-bottom").addClass('on');
+			} else {
+				// 바닥이 아닐 때 (위로 조금이라도 올렸을 때)
+				$(".fixed-scroll-bottom").removeClass('on');
+			}
+		});
+
+
+	</script>
+	
+	
+
+</body>

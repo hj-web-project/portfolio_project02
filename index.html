@@ -49,8 +49,6 @@
 	
 </head>
 <body>
-
-
 	<div class="wrap">
 		<main id="main">
 			<!-- 인트로 -->
@@ -60,8 +58,8 @@
 					</p>
 				</div>
 				<div class="main-title-wr fill-text">
-					<span class="base-text">사용자가 머무르고 싶은 화면을 만듭니다.</span>
-					<span class="top-text">사용자가 머무르고 싶은 화면을 만듭니다.</span>
+					<span class="base-text">웹의 가치를 새롭게 만듭니다.</span>
+					<span class="top-text">웹의 가치를 새롭게 만듭니다.</span>
 				</div>
 				<div class="bt-tx-wr">
 					<p class="tx-style01">SEOUL, KR</p>
@@ -87,11 +85,7 @@
 					</nav>
 				</div>
 			</header>
-			<style>
-				.main-intro-title-wr .text{background: linear-gradient(to right, #fff 50%, rgba(255, 255, 255, 0.13) 50%); background-size: 200% 100%; background-position: 100% 0; -webkit-background-clip: text; background-clip: text; color: transparent;display: block;}
-				
-			</style>
-		
+			
 
 			<!-- 비주얼 -->
 			<section class="main-content-wr h100-center hgt__100vh" id="main-contents-wr00" data-scroll>
@@ -115,105 +109,176 @@
 					</div>
 				</div>
 			</section>
+			
+			<style>
+				#main-contents-wr01 .main-title-wr .tx01{opacity:0; position:relative; top:30px;}
+				#main-contents-wr01 .img-wr{opacity:0; position:relative; top:30px;}
+				.main-title-wr .tit{opacity:0; position:relative; top:30px;}
+				.main-title-wr .title{opacity:0; position:relative; top:30px;}
+				
+				
+				#main-contents-wr01 .flex-wr[data-scroll="in"] .main-title-wr .tx01{opacity:1; top:0; transition:all 0.8s ease; transition-delay:0.25s;}
+				#main-contents-wr01 .flex-wr[data-scroll="in"] .img-wr{opacity:1; top:0; transition:all 0.8s ease; transition-delay:0.25s;}
+				
+				
+				.main-content-wr[data-scroll="in"] .main-title-wr .tit{opacity:1; top:0; transition:all 0.8s ease; transition-delay:0.2s;}
+				.main-content-wr[data-scroll="in"] .main-title-wr .title{opacity:1; top:0; transition:all 0.8s ease; transition-delay:0.3s;}
+				
+				
+				.main-content-wr .project-li-wr[data-scroll="in"] .project-explan-wr{opacity:1; top:0;}
+				
+				.main-content-wr .project-li-wr .project-explan-wr{transition: all 0.8s ease; opacity:0; position:relative; top:30px; transition-delay:0.35s;}
+					
+				.main-content-wr .project-li-wr .project-img { transition: all 0.8s ease; transition-delay: 0.25s; }
+				.main-content-wr .project-li-wr:nth-child(odd) .project-img { opacity: 0; transform: translateX(-30px); }
+				.main-content-wr .project-li-wr:nth-child(even) .project-img { opacity: 0; transform: translateX(30px); }
+				.main-content-wr .project-li-wr[data-scroll="in"] .project-img { opacity: 1; transform: translateX(0); }
+
+			</style>
+			
+			
 			<!-- section01 -->
-			<section class="main-content-wr main-contents-wr01 h100-center hgt__100vh" id="main-contents-wr01">
+			<section class="main-content-wr main-contents-wr01 h100-center hgt__100vh" id="main-contents-wr01" data-scroll>
 				<div class="inner__cen1600">
-					<div class="flex-wr">
+					<div class="flex-wr" data-scroll>
 						<div class="main-title-wr">
 							<p class="tit">01 / WHO I AM</p>
 							<div class="img-wr visible1024"><img src="images/leehaeji.jpg" alt="이혜지"></div>
 							<p class="tx01 mt30">웹 개발자 / 프로젝트 리더 이혜지<br>5년 차의 실무 노하우로 설계부터 구현, 완성도 높은 결과물까지 책임집니다.<br><br>
 							안녕하세요, 개발자 이혜지입니다.<br>
-							웹 에이전시에서 5년간 대규모 웹 시스템 구축 및 운영 프로젝트를 다수 완수해 왔습니다.<br>
-							단순 UI/UX 퍼블리싱을 넘어 요구사항 분석, 마크업 구조 설계, CMS 커스터마이징까지<br>
+							웹 에이전시에서 5년간 대규모 웹 시스템 구축 및 운영 프로젝트를<br class="visible570"> 다수 완수해 왔습니다.<br class="hidden570">
+							단순 UI/UX 퍼블리싱을 넘어<br class="visible570"> 요구사항 분석, 마크업 구조 설계, CMS 커스터마이징까지<br>
 							프로젝트 전 주기를 주도적으로 리드해 온 경험을 보유하고 있습니다.<br><br>
 							이러한 노하우를 바탕으로 귀사의 프로젝트가 기획 의도에 맞게<br>
 							정확하고 안정적으로 구현될 수 있도록 지원하겠습니다.<br><br>
 							기술적 성취감과 성과를 향한 집요함으로 고객사의 비즈니스 목표를 이해하고,<br>
 							기대 이상의 완성도 높은 웹 서비스를 제공하겠습니다.
 							</p>
-							<p class="tx02 hide"></p>
-							<a href="./resume.html" class="view-btn PlayfairDisplay button button--janus hide"><span>이력서 보기</span></a>
 						</div>
 						<div class="img-wr hidden1024"><img src="images/leehaeji.jpg" alt="이혜지"></div>
 					</div>
 				</div>
 			</section>
 			
-			<section class="main-content-wr main-contents-wr02" id="main-contents-wr02">
+			<section class="main-content-wr main-contents-wr02" id="main-contents-wr02" data-scroll>
 				<div class="inner__cen1600">
 					<div class="main-title-wr">
 						<p class="tit">02 / Selected Works</p>
 					</div>
 					<div class="main-contents-box main-contents-box01">
 						<ul>
-							<li class="project-li-wr">
-								<a href="./project/01.html" class="project-li">
-									<div class="project-img img-wr"><img src="images/project01.png" alt="올빗"></div>
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project01.html" class="project-li">
+									<div class="project-img img-wr"><img src="images/lnk_img.jpg" alt="이낙근찹쌀떡"></div>
 									<div class="project-explan-wr">
-										<p class="tit01"><span class="number">01</span>New Build</p>
-										<p class="subject">ORBYT</p>
-										<p class="tx01">Responsive Web</p>
+										<p class="tit01"><span class="number">01</span>Store Build <span>ㅣ</span>Food</p>
+										<p class="subject">이낙근찹쌀떡</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
 										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
 									</div>
 								</a>
 							</li>
-							<li class="project-li-wr">
-								<a href="./project/02.html" class="project-li reverse">
-									<div class="project-img img-wr"><img src="images/project03.png" alt="플랜에이제트"></div>
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project02.html" class="project-li reverse">
+									<div class="project-img img-wr"><img src="images/silkn_img.jpg" alt="실큰코리아"></div>
 									<div class="project-explan-wr">
-										<p class="tit01"><span class="number">03</span>Web Renewal</p>
-										<p class="subject">PLAN A-Z</p>
-										<p class="tx01">Responsive Web</p>
+										<p class="tit01"><span class="number">02</span>Store Build <span>ㅣ</span>Beauty</p>
+										<p class="subject">SILK'N</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
 										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
 									</div>
 								</a>
 							</li>
 
-							<li class="project-li-wr">
-								<a href="#none" class="project-li">
-									<div class="project-img img-wr"><img src="images/project02.png" alt="비스튜디오"></div>
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project03.html" class="project-li">
+									<div class="project-img img-wr"><img src="images/skin1004_img.jpg" alt="스킨천사"></div>
 									<div class="project-explan-wr">
-										<p class="tit01"><span class="number">02</span>Web Renewal</p>
-										<p class="subject">B-Studio</p>
-										<p class="tx01">Responsive Web</p>
+										<p class="tit01"><span class="number">03</span>Web Renewal <span>ㅣ</span>Beauty</p>
+										<p class="subject">SKIN1004</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
 										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
 									</div>
 								</a>
 							</li>
 							
-							<li class="project-li-wr">
-								<a href="#none" class="project-li reverse">
-									<div class="project-img img-wr"><img src="images/project04-1.png" alt="아이콘플래닝"></div>
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project04.html" class="project-li reverse">
+									<div class="project-img img-wr"><img src="images/lamy_img.jpg" alt="lamy"></div>
 									<div class="project-explan-wr">
-										<p class="tit01"><span class="number">04</span>New Build</p>
-										<p class="subject">ICON PLANNING</p>
-										<p class="tx01">Responsive Web</p>
+										<p class="tit01"><span class="number">04</span>Web Renewal <span>ㅣ</span>Stationery</p>
+										<p class="subject">LAMY</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
 										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
 									</div>
 								</a>
 							</li>
+							
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project05.html" class="project-li">
+									<div class="project-img img-wr"><img src="images/drdifferent_img.jpg" alt="drdifferent"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">05</span>Web Renewal <span>ㅣ</span>Beauty</p>
+										<p class="subject">DR.DIFFERENT</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+							
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project06.html" class="project-li reverse">
+									<div class="project-img img-wr"><img src="images/liaisondeloren_img.jpg" alt="liaisondeloren"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">06</span>Web Renewal <span>ㅣ</span>Beauty</p>
+										<p class="subject">liaisondeloren</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project07.html" class="project-li">
+									<div class="project-img img-wr"><img src="images/sungboon_img.jpg" alt="성분에디터"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">07</span>Web Renewal <span>ㅣ</span>Beauty</p>
+										<p class="subject">성분에디터</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+							
+							<li class="project-li-wr" data-scroll>
+								<a href="./project/project08.html" class="project-li reverse">
+									<div class="project-img img-wr"><img src="images/zwilling_img.jpg" alt="zwilling"></div>
+									<div class="project-explan-wr">
+										<p class="tit01"><span class="number">08</span>Web Renewal <span>ㅣ</span>Living</p>
+										<p class="subject">zwilling</p>
+										<p class="tx01">Responsive Web / CAFE24</p>
+										<p class="main-btn"><span class="hover-line"></span>VIEW MORE</p>
+									</div>
+								</a>
+							</li>
+							
 						</ul>
 					</div>
 				</div>
 			</section>
-
 			<style>
-			.main-contents-wr03 .stack-li-wr{display:flex; flex-wrap:wrap; gap:60px 30px;}
-			.main-contents-wr03 .stack-li-wr .stack-li{width:calc(33.33% - 20px);}
-			.main-contents-wr03 .stack-li-wr .stack-li .tit{font-size:20px; font-weight: 300; color:#fff; font-family: "Playfair Display", sans-serif; margin-bottom: 24px;
-			position:relative; padding-left: 15px;}
-			.main-contents-wr03 .stack-li-wr .stack-li .tit:before{content:''; display:block; width:2px; height:24px; background:var(--main__color); position:absolute; left:0; top:50%; transform:translateY(-50%);}
-
-			.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr{ display:flex; align-items:center; justify-content: space-between;}
-			.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr .tx{color:var(--tx__color01); font-size:14px; font-weight: 400; margin-bottom: 12px;}
-			.stack-group{display:flex; align-items:center;gap:5px;}
-			.stack-group span{width:5px; height:5px; border-radius:50%; background:#1f2937; display:block;}
-			.stack-group span.white{background:#fff;}
+				
+			
+				
+				.main-contents-wr03 .stack-li-wr{transition: all 0.8s ease; opacity:0; position:relative; top:30px;}
+				.main-contents-wr03[data-scroll="in"] .stack-li-wr{opacity:1; top:0; transition-delay: 0.3s;}
+				
+				
+				.main-contents-wr04 .ft-emailform-box{opacity:0; top:30px; transition-delay: 0.3s; transition: all 0.8s ease; position:relative;}
+				.main-contents-wr04 .ft-emailform-box[data-scroll="in"]{ opacity:1; top:0; transition-delay: 0.25s;}
+				
+				
 			</style>
-
-
-			<section class="main-content-wr main-contents-wr03 h100-center hgt__100vh" id="main-contents-wr03">
+			<section class="main-content-wr main-contents-wr03 h100-center hgt__100vh" id="main-contents-wr03" data-scroll>
 				<div class="inner__cen1600">
 					<div class="main-title-wr">
 						<p class="tit">03 / STACK</p>
@@ -315,7 +380,7 @@
 										<span class="white"></span>
 										<span class="white"></span>
 										<span class="white"></span>
-										<span class=""></span>
+										<span class="white"></span>
 									</div>
 								</div>
 							</li>
@@ -368,33 +433,7 @@
 				</div>
 			</section>
 			
-
-			<section class="hide main-content-wr main-contents-wr04" id="main-contents-wr04">
-				<div class="inner__cen1600">
-					<div class="main-title-wr">
-						<p class="tit">04 / CONTACT</p>
-						<p class="title">Let's Build<br> Something Great<br> Together</p>
-						<p class="tx01 mt40">인터랙티브 웹과 경험을 갖춘 웹 퍼블리셔입니다.<br>
-						제 역량이 필요한 곳이라면 어디든 환영입니다.</p>
-					</div>
-				</div>
-			</section>
-			<style>
-			.footer{padding:0 0 80px;}
-			.footer .main-title-wr .title{font-family: 'Inter', 'Pretendard', dotum, sans-serif; font-size: 90px; line-height: 1.12; font-weight: 800;
-				text-transform: uppercase; letter-spacing:-1px;}
-			
-			.footer .ft-bottom-info-wr{display:flex;}
-			.footer .ft-bottom-info-wr li{width:33.33%; }
-			.footer .ft-bottom-info-wr li .tit{font-size:50px; font-weight:600; margin-bottom: 16px; display: inline-block; color:#fff; text-align: center;}
-			.footer .ft-bottom-info-wr li .text02{font-size:18px; font-weight:400; color:#fff; display:block;}
-			.footer .main-title-wr{margin-bottom: 180px;}
-			
-			@media (pointer: fine) {
-			.footer .ft-bottom-info-wr li .tit:hover{background:#fff; color:#191919; font-weight: 500;}
-			}
-			</style>
-			<footer class="footer" id="footer">
+			<section class="main-content-wr main-contents-wr04" id="main-contents-wr04" data-scroll>
 				<div class="inner__cen1600">
 					<div class="main-title-wr talign__center">
 						<p class="tit mb30">04 / CONTACT</p>
@@ -402,68 +441,150 @@
 					</div>
 					
 					<!-- modify this form HTML and place wherever you want your form -->
-						<form
-						  action="https://formspree.io/f/mnpqyykv"
-						  method="POST"
-						>
-						  <label>
-							Your email:
-							<input type="email" name="email">
-						  </label>
-						  <label>
-							Your message:
-							<textarea name="message"></textarea>
-						  </label>
-						  <!-- your other form fields go here -->
-						  <button type="submit">Send</button>
-						</form>
-						
-						<p id="form-status"></p>
-						
-						<script>
-						  const form = document.getElementById("my-form");
-						  const status = document.getElementById("form-status");
-						  const button = document.getElementById("submit-btn");
+					<div class="ft-emailform-box" data-scroll>
+						<form id="my-form" action="https://formspree.io/f/mnpqyykv" method="POST">
+							<div class="flex-box-wr">
+								<div class="flex-box">
+									<!-- 1. 이름 -->
+									<label for="name">이름 <span>*</span></label>
+									<input type="text" id="name" name="name" required placeholder="홍길동">
+								 </div>
+							 
+							 
+								<div class="flex-box">
+									<!-- 2. 회사 -->
+									<label for="company">회사/브랜드 <span>*</span></label>
+									<input type="text" id="company" name="company" placeholder="회사명/브랜드">
+								 </div>
+							</div>
+							<div class="flex-box-wr">
+								<!-- 3. 이메일 -->
+								<div class="flex-box">
+									<label for="email">이메일 주소 <span>*</span></label>
+									<input type="email" id="email" name="email" required placeholder="you@email.com">
+								</div>
 
-						  form.addEventListener("submit", async function (event) {
-							event.preventDefault(); // 기본 폼 제출(페이지 이동) 방지
+								<!-- 4. 예산 -->
+								<div class="flex-box">
+									<label for="budget">예산 범위 <span>*</span></label>
+									<select id="budget" name="budget">
+									  <option value="">예산을 선택해주세요</option>
+									  <option value="300만원 미만">300만원 미만</option>
+									  <option value="300만원 ~ 500만원">300만원 ~ 500만원</option>
+									  <option value="500만원 ~ 1,000만원">500만원 ~ 1,000만원</option>
+									  <option value="1,000만원 이상">1,000만원 이상</option>
+									  <option value="협의 필요">협의 필요</option>
+									</select>
+								</div>
+							</div>
+							<div class="flex-box-wr">
+								<!-- 5. 완료 희망일정 -->
+								<div class="flex-box">
+									<label for="deadline">완료 희망일정 <span>*</span></label>
+									<input type="text" id="deadline" name="deadline" placeholder="예: 2027년 1월 말 / 미정">
+								</div>
+
+								<!-- 6. 참고사이트 -->
+								<div class="flex-box">
+									<label for="reference">참고사이트 (URL) <span>*</span></label>
+									<input type="url" id="reference" name="reference" placeholder="https://example.com">
+								</div>
+							</div>
+							<!-- 7. 프로젝트 내용 -->
+							<div class="">
+								<label for="message">프로젝트 내용 <span>*</span></label>
+								<textarea id="message" name="message" required placeholder="구상 중이신 프로젝트에 대해 자세히 작성해 주세요."></textarea>
+							</div>
 							
-							button.disabled = true;
-							status.innerText = "전송 중...";
 
-							const data = new FormData(form);
-
-							try {
-							  const response = await fetch(form.action, {
-								method: form.method,
-								body: data,
-								headers: {
-								  'Accept': 'application/json'
-								}
-							  });
-
-							  if (response.ok) {
-								status.innerText = "성공적으로 전송되었습니다! 빠르게 답변드릴게요.";
-								form.reset(); // 폼 입력값 초기화
-							  } else {
-								const result = await response.json();
-								if (Object.hasOwn(result, 'errors')) {
-								  status.innerText = result.errors.map(error => error["message"]).join(", ");
-								} else {
-								  status.innerText = "전송 중 오류가 발생했습니다. 다시 시도해 주세요.";
-								}
-							  }
-							} catch (error) {
-							  status.innerText = "네트워크 오류가 발생했습니다. 인터넷 연결을 확인하세요.";
-							} finally {
-							  button.disabled = false;
-							}
-						  });
-						</script>
-
-
-
+							<!-- 제출 버튼 -->
+							<div class="talign__center">
+								<button type="submit" class="hover-slide-right" id="submit-btn">
+									<span>메세지 보내기 <img src="images/icon_arrow.png" alt="arrow"></span>
+								</button>
+							</div>
+						</form>
+					</div>
 					
+					<!-- 모달 팝업 HTML 구조 -->
+					<div id="modal-overlay" class="modal-overlay">
+						<div class="modal-content">
+							<div id="modal-icon" class="modal-icon"></div>
+							<p id="modal-status" class="modal-message"></p>
+							<button type="button" id="modal-close-btn" class="modal-btn">확인</button>
+						</div>
+					</div>
+
+
+					<!-- 3. JavaScript 영역 (동일 - FormData가 7개 항목을 자동으로 수집함) -->
+					<script>
+					  document.addEventListener("DOMContentLoaded", function () {
+						const form = document.getElementById("my-form");
+						const submitBtn = document.getElementById("submit-btn");
+
+						const modalOverlay = document.getElementById("modal-overlay");
+						const modalStatus = document.getElementById("modal-status");
+						const modalIcon = document.getElementById("modal-icon");
+						const modalCloseBtn = document.getElementById("modal-close-btn");
+
+						if (!form) return;
+
+						function showModal(message, isSuccess = true) {
+						  modalStatus.innerText = message;
+						  modalIcon.innerText = isSuccess ? "✅" : "❌";
+						  modalOverlay.classList.add("active");
+						}
+
+						function closeModal() {
+						  modalOverlay.classList.remove("active");
+						}
+
+						modalCloseBtn.addEventListener("click", closeModal);
+
+						modalOverlay.addEventListener("click", function (e) {
+						  if (e.target === modalOverlay) {
+							closeModal();
+						  }
+						});
+
+						form.addEventListener("submit", async function (event) {
+						  event.preventDefault();
+
+						  submitBtn.disabled = true;
+						  submitBtn.innerText = "Sending...";
+
+						  // FormData 객체가 form 안의 모든 name 속성을 가진 입력 요소(7개)를 알아서 다 묶어줍니다.
+						  const data = new FormData(form);
+
+						  try {
+							const response = await fetch(form.action, {
+							  method: form.method,
+							  body: data,
+							  headers: {
+								'Accept': 'application/json'
+							  }
+							});
+
+							if (response.ok) {
+							  showModal("문의가 성공적으로 전송되었습니다!\n확인 후 빠르게 연락드리겠습니다.", true);
+							  form.reset();
+							} else {
+							  const result = await response.json();
+							  if (Object.hasOwn(result, 'errors')) {
+								showModal(result.errors.map(error => error["message"]).join(", "), false);
+							  } else {
+								showModal("전송 중 문제가 발생했습니다. 다시 시도해주세요.", false);
+							  }
+							}
+						  } catch (error) {
+							showModal("네트워크 오류가 발생했습니다. 인터넷 연결을 확인해주세요.", false);
+						  } finally {
+							submitBtn.disabled = false;
+							submitBtn.innerText = "Send";
+						  }
+						});
+					  });
+					</script>
 					<div class="hide">
 						<ul class="ft-bottom-info-wr">
 							<li>
@@ -478,7 +599,48 @@
 						</ul>
 					</div>
 				</div>
+			</section>
+			<style>
+				.main-bt-wr .flex-wr{display:flex; width:90%; margin:0 auto;}
+				.main-bt-wr .flex-wr h1{opacity:0; transform:translateY(30%); transition:all 0.8s ease;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1{opacity:1; transform:translateY(0%);}
+				
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(1){transition-delay:0.2s;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(2){transition-delay:0.25s;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(3){transition-delay:0.3s;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(4){transition-delay:0.35s;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(5){transition-delay:0.4s;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(6){transition-delay:0.45s;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(7){transition-delay:0.5s;}
+				.main-bt-wr[data-scroll="in"] .flex-wr h1:nth-child(8){transition-delay:0.55s;}
+				
+			</style>
+			<div class="main-bt-wr" id="main-bt-wr" data-scroll>
+				<div class="flex-wr">
+					<h1 class="">T</h1>
+					<h1 class="">H</h1>
+					<h1 class="">A</h1>
+					<h1 class="">N</h1>
+					<h1 class="">K</h1>
+					<h1 class="">Y</h1>
+					<h1 class="">O</h1>
+					<h1 class="">U</h1>
+				</div>
+			</div>
+			
+			<footer class="main-footer sub-footer">
+				<div class="inner__cen1600 talign__center">
+					<p class="tx01">웹 퍼블리셔 / 웹 프론트엔드 개발자 이혜지의<br> 2026 포트폴리오</p>
+					<div class="ft-link-wr">
+						<a href="index.html" class="tx01">포트폴리오 홈</a>
+						<a href="javascript:void(0);" onclick="alert('준비 중입니다.');" class="tx01">실무 프로젝트 갤러리</a>
+						<a href="#main-contents-wr04" class="tx01">미팅신청</a>
+					</div>
+					<p class="tx01">© 2026 Leehaeji Portfolio</p>
+				</div>
+				
 			</footer>
+			
 			
 			<script>
 				$(function() {
@@ -583,18 +745,16 @@
 			Splitting();
 		});
 		
-		$(window).scroll(function(event){
+		$(window).on('scroll', function() {
 			var scTop = $(this).scrollTop();
-			var winHeight = $(window).height();
-			var docHeight = $(document).height();
-			
-			// 계산의 정확도를 위해 소수점을 올림(Math.ceil) 처리합니다.
-			// 브라우저 줌(Zoom)이나 모바일 환경에서 1px 미만의 오차로 바닥 감지가 안 되는 것을 방지합니다.
-			if (Math.ceil(scTop + winHeight) >= docHeight) {
-				// 화면 맨 밑바닥에 닿았을 때
+			var winHeight = $(this).height();
+			// 바닥 감지 오차 방지를 위해 document.body.scrollHeight 직접 참조
+			var docHeight = document.documentElement.scrollHeight || $(document).height();
+
+			// 5px 정도의 여유 유격(Threshold)을 두어 소수점 오차 완벽 해결
+			if (scTop + winHeight >= docHeight - 5) {
 				$(".fixed-scroll-bottom").addClass('on');
 			} else {
-				// 바닥이 아닐 때 (위로 조금이라도 올렸을 때)
 				$(".fixed-scroll-bottom").removeClass('on');
 			}
 		});

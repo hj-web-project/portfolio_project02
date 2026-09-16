@@ -1,0 +1,403 @@
+<!doctype html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <title>이혜지 이력서</title>
+    <!-- Viewport -->
+    <meta name="viewport" id="meta_viewport" content="width=device-width, initial-scale=1.0, minimum-scale=0, maximum-scale=10">
+	<meta property="og:image" content="images/w_ogimg.png">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="">
+	<meta property="og:title" content="Portfolio">
+	<meta property="og:description" content="Portfolio">
+	<meta property="og:site_name" content="Portfolio">
+
+    <!-- jQuery -->
+    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
+	<!-- css 셋팅 -->
+	<link rel="stylesheet" href="css/assets.css">
+	<link rel="stylesheet" href="css/common.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <!-- GSAP -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollToPlugin.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/Flip.min.js"></script>
+
+    <!-- Lenis -->
+    <script src="https://cdn.jsdelivr.net/gh/studio-freight/lenis@1.0.27/bundled/lenis.min.js"></script>
+
+    <!-- ScrollOut -->
+    <script src="https://unpkg.com/scroll-out/dist/scroll-out.min.js"></script>
+    <!-- Three.js -->
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/0.160.0/three.min.js"></script>
+
+	<script src="https://unpkg.com/splitting@1.0.6/dist/splitting.min.js"></script>
+	<link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting.css" />
+	<link rel="stylesheet" href="https://unpkg.com/splitting@1.0.6/dist/splitting-cells.css" />
+
+	<!-- font -->
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Playfair+Display:ital,wght@0,400..900;1,400..900&display=swap" rel="stylesheet">
+
+	<script src="js/main.js"></script>
+	
+</head>
+<body>
+	<style>
+	.resume-wrap{padding:120px 0;}
+	.resume-wrap .name{font-weight: 500; color:#fff; display:flex; align-items:center; font-size:30px; gap:12px;}
+	.resume-wrap .name .cate{font-size:14px; display:block; padding:0 10px; height:24px; line-height: 23px; background:var(--main__color); color:#fff;
+	border-radius:36px;}
+
+	.resume-wrap .text01{font-size:14px; font-weight: 400; color:var(--color03);}
+	.resume-wrap .text02{font-size:14px; font-weight: 400; color:#fff;}
+	.resume-wrap .text03{font-size:16px; font-weight: 500; color:#fff;}
+	.resume-wrap .text04{font-size:12px; font-weight: 400; color:var(--color03);}
+
+	.contents__border{background:var(--color02); display:block; width:100%; height:1px; margin:40px 0;}
+
+	.li-box-wr{display:flex; gap:20px;}
+	.li-box-wr .li-box{border:1px solid var(--color02); border-radius:10px; padding:20px;}
+	.li-box-wr .li-box .text03{margin:24px 0 5px;}
+	.resume-wrap .contents-box{margin-top: 40px;}
+	.resume-wrap .sub-tit{color:#fff; font-size:18px; font-weight: 500; margin-bottom: 12px;}
+	.resume-wrap .contents-box p{color:var(--color03); font-size:16px; font-weight: 400; line-height: 1.56; word-break:keep-all;}
+
+	.resume-wrap .skill-wr{flex-wrap:wrap;}
+	.resume-wrap .skill-wr li{font-size:12px; text-align: center; height:30px; line-height: 29px; border:1px solid rgba(255,87,23,0.3); display:block;
+	padding:0 10px; border-radius:36px; color:rgba(255,87,23,0.8); font-weight: 400;}
+
+	.resume-wrap .profile-img-wr{width:180px;}
+	.resume-wrap .profile-img-wr img{width:100%;}
+
+	.resume-wrap .top-info-box .text01 .info-tx{width:55px; display:inline-block;}
+	.resume-wrap .top-info-box .text01 .info-tx .text02{}
+	.li-box-wr .li-box .text01{display:flex; align-items:center; gap:4px;}
+	.li-box-wr .li-box .text01 .icon{width:18px; filter: brightness(0.5) invert(0.4);}
+
+	</style>
+	<div class="wrap resume-wrap" id="resume-wrap">
+		<div class="inner__cen1280">
+			<div class="top-info-box flex-wr">
+				<div>
+					<p class="name">이혜지 <span class="cate">경력</span></p>
+					<p class="text01 mb40 mt08">여, 1997 (29세)</p>
+					<p class="text01 mb08"><span class="info-tx">이메일</span><span class="text02">hjlee0714@gmail.com</span></p>
+					<p class="text01 mb08"><span class="info-tx">휴대폰</span><span class="text02">010-2226-9131</span></p>
+					<p class="text01"><span class="info-tx">주소</span><span class="text02">서울 동작구</span></p>
+				</div>
+
+				<div class="profile-img-wr"><img src="images/leehaeji.jpg" alt="증명사진"></div>
+			</div>
+
+			<span class="contents__border"></span>
+			<ul class="li-box-wr">
+				<li class="li-box">
+					<p class="text01"><img src="images/bag-ico.png" class="icon" alt="icon">경력</p>
+					<p class="text03">플랜에이제트</p>
+					<p class="text04">총 4년</p>
+				</li>
+				<li class="li-box">
+					<p class="text01"><img src="images/education-ico.png" class="icon" alt="icon">학력</p>
+					<p class="text03">동아대학교 (중퇴)</p>
+				</li>
+				<li class="li-box">
+					<p class="text01"><img src="images/money-ico.png" class="icon" alt="icon" style="width:16px;">희망연봉</p>
+					<p class="text03">면접 후 결정</p>
+				</li>
+				<li class="hide li-box">
+					<p class="text01">포트폴리오</p>
+					<p class="text03">플랜에이제트</p>
+					<p class="text04">총 4년</p>
+				</li>
+			</ul>
+			<div class="contents-box">
+				<h4 class="sub-tit">간략 소개</h4>	
+				<p>웹 에이전시 개발팀에서 4년간 근무하며 대규모 시스템 구축 및 운영 프로젝트를 성공적으로 완수해 왔습니다.<br>
+				퍼블리싱 실무를 넘어 3년 차부터는 프로젝트 PM으로서 전체 공정을 리드하며, 요구사항 분석부터 마크업 구조 설계,<br>
+				CMS 커스터마이징까지 프로젝트 전 주기를 책임지는 핵심 인재로 성장했습니다.<br><br>
+				기술적으로는 HTML, SCSS, JavaScript를 기반으로 Three.js와 GSAP 등 인터랙티브 라이브러리를<br>
+				자사 주요 프로젝트에 적극 도입하여 완성도 높은 사용자 경험을 구현했습니다. <br>
+				현재는 React, Vue.js 등 현대적인 프레임워크 역량을 내재화하여 복합적인 프론트엔드 환경에서도<br> 주도적인 역할을 수행할 준비가 되어 있습니다.<br>
+				업무의 본질을 이해하고 실질적인 기여에 집중하며 동료와 함께 성장하는 가치를 창출하겠습니다.</p>
+			</div>
+			<div class="contents-box">
+				<h4 class="sub-tit">핵심역량</h4>
+				<p>• 디자인 의도를 완벽히 분석하여 사용자 경험(UX) 최적화 및 웹 표준을 준수하는 고도화된 마크업 설계</p>
+				<p>• 다양한 디바이스 환경에 대응하는 유연하고 견고한 반응형 웹 시스템 구축 역량 보유</p>
+				<p>• 인터랙티브 요소 구현 및 고성능 애니메이션 최적화</p>
+				<p>• 팀과 함께 일할 때, 높은 소통 능력을 바탕으로 문제 발생 시 빠르게 해결합니다.</p>
+				<p>• 새로운 기술과 트렌드를 배우며 성장하려고 노력합니다.</p>
+			</div>
+			<span class="contents__border"></span>
+			<div class="contents-box">
+				<h4 class="sub-tit">나의 스킬</h4>
+				<ul class="skill-wr flex-wr style02">
+					<li>HTML5</li>
+					<li>CSS3</li>
+					<li>JavaScript</li>
+					<li>GSAP</li>
+					<li>Three.js</li>
+					<li>WebGL</li>
+					<li>Figma</li>
+					<li>Adobe XD</li>
+					<li>Adobe Photoshop</li>
+					<li>Adobe Illustrator</li>
+					<li>크로스브라우징</li>
+					<li>웹접근성</li>
+					<li>웹표준</li>
+					<li>GitHub</li>
+					<li>ScrollTrigger</li>
+					<li>SEO</li>
+					<li>CMS</li>
+				</ul>
+			</div>
+			<style>
+			.resume-wrap .contents-box .title{color:#fff; font-size:18px; margin-bottom: 40px; border-top: 1px solid var(--color03); border-bottom: 1px solid var(--color02);
+			padding:16px 0;}
+			.resume-wrap .contents-box .title span{color:var(--main__color); font-size:14px; font-weight: 400; display:block;}
+			.resume-wrap .info-tx-wr{display:flex;}
+			.resume-wrap .info-tx-wr .text02{width:300px; color:#fff; font-weight: 600; font-size:18px;}
+			.resume-wrap .info-tx-wr .company-name{flex:1;}
+			.resume-wrap .company-name{font-size:16px; font-weight: 600;}
+			.resume-wrap .company-name p.text04{font-size:14px; margin-top: 20px;}
+
+			.resume-wrap .bt-info-box{border-top: 1px solid var(--color03); padding-top: 40px;}
+
+			.resume-wrap .project-info{margin-bottom: 40px;}
+			.resume-wrap .project-info:last-child{margin-bottom: 0;}
+			.resume-wrap .project-info .project-title{margin-bottom: 16px; font-weight: 500;}
+			.resume-wrap .project-info .project-title strong{}
+			.resume-wrap .project-info .info-list li{ display:flex; font-size:14px; font-weight: 400; margin-bottom: 6px;}
+			.resume-wrap .project-info .info-list li:last-child{margin-bottom: 0;}
+			.resume-wrap .project-info .info-list li .label-tit{ width:150px; display:block; font-size:14px; line-height: 1.65; font-weight: 400; color:var(--color03);}
+			.resume-wrap .project-info .info-list li .desc{ flex:1; line-height: 1.65; }
+			.resume-wrap .project-info .info-list li .desc:last-child{}
+			.resume-wrap .project-info .info-list li .desc.view{margin-top: 4px;font-size:13px; color:#fff; font-weight: 400; display:inline-block; flex: initial; position:relative;}
+			.resume-wrap .project-info .info-list li .desc.view:after{width:0; height:0.5px; content:''; display:block; position:absolute; bottom:0; left:0;
+			background:#fff; transition:all 0.5s;}
+
+			.view .arrow{display: inline-block; transition:all 0.5s;}
+
+			@media (pointer: fine) {
+			.resume-wrap .project-info .info-list li .desc.view:hover:after{width:100%; }
+			.resume-wrap .project-info .info-list li .desc.view:hover .arrow{transform: translateX(30%);}
+			}
+			
+			.top-info-box .info-tx-wr{margin-bottom: 40px;}
+			.resume-wrap .info-tx-wr .company-name p{width:100%;}
+
+
+			</style>
+			
+			
+			
+			
+
+			<div class="top-info-box contents-box">
+				<p class="title flex-wr style02">경력 <span>총 4년</span></p>
+				<div class="info-tx-wr">
+					<p class="text02">2023.06 ~ 2026.04</p>
+					<div class="company-name">
+					<p class="text02 flex-wr style02">플랜에이제트<span class="text01">개발팀 PM · 퍼블리셔</span></p>
+					<p class="text04">웹 에이전시 개발팀에서 4년간 근무하며 대규모 시스템 구축 및 다양한 운영 프로젝트를 성공적으로 완수하였습니다.<br>
+					초기 2년은 웹퍼블리싱 실무에 집중하여 HTML, SCSS, JavaScript를 기반으로 한 웹 표준 및 접근성 준수, 그리고 견고한 반응형 마크업 설계 역량을 쌓았습니다.<br>
+					특히 Three.js와 GSAP 등 하이엔드 인터랙티브 라이브러리를 자사 주요 프로젝트에 적극적으로 도입하여,<br>
+					시각적 몰입감이 높고 완성도 있는 사용자 경험(UX)을 기술적으로 구현하는데 중점을 두었습니다.<br><br>
+					3년 차부터는 퍼블리싱 실무를 넘어 프로젝트 PM으로서 전체 공정을 리드하는 역할을 수행하였습니다.<br>
+					요구사항 분석 단계부터 마크업 구조 설계, CMS 커스터마이징, 그리고 최종 운영 유지보수에 이르기까지 프로젝트 전 주기에 걸쳐 업무를 책임지고 관리하였습니다.<br>
+					이를 통해 기획, 디자인, 개발 파트 간의 워크플로우를 최적화하고 기술적 접점을 조율하는 실무형 인재로 성장하였습니다.</p>
+					</div>
+				</div>
+				<div class="info-tx-wr">
+					<p class="text02">2022.01 ~ 2023.04</p>
+					<div class="company-name">
+					<p class="text02 flex-wr style02">SBS 아카데미 컴퓨터 아트학원 <span class="text01">웹디자인/퍼블리셔 과정 수료</span></p>
+					<p class="text04"></p>
+					</div>
+				</div>
+				<div class="info-tx-wr">
+					<p class="text02">2020.10 ~ 2023.01</p>
+					<div class="company-name">
+					<p class="text02 flex-wr style02">(주)베이시코<span class="text01">디자인팀 사원</span></p>
+					<p class="text04"></p>
+					</div>
+				</div>
+				
+				
+			</div>
+			
+
+			<div class="bt-info-box contents-box">
+				<div class="info-tx-wr">
+					<p class="text02">경력기술서</p>
+					<div class="company-name">
+						<div class="project-info">
+							<h3 class="project-title">바우어랩 올빗</h3>
+							<ul class="info-list">
+								<li>
+									<span class="label-tit">고객사</span>
+									<span class="desc">바우어랩</span>
+								</li>
+								<li>
+									<span class="label-tit">수행 기간</span>
+									<span class="desc">2026년 04월 ~ 2026년 04월 (2주)</span>
+								</li>
+								<li>
+									<span class="label-tit">기술 스택</span>
+									<span class="desc">HTML5, CSS3(SCSS), JavaScript, Three.js, GSAP, ScrollTrigger, Lenis</span>
+								</li>
+								<li>
+									<span class="label-tit">기여도</span>
+									<span class="desc">프론트엔드 및 퍼블리싱 100%</span>
+								</li>
+								<li>
+									<span class="label-tit"></span>
+									<a href="./project/01.html" class="desc view">포트폴리오 보러가기<span class="arrow">→</span></a>
+								</li>
+								
+							</ul>
+						</div>
+						<div class="project-info">
+							<h3 class="project-title">아이콘플래닝</h3>
+							<ul class="info-list">
+								<li>
+									<span class="label-tit">고객사</span>
+									<span class="desc">아이콘플래닝</span>
+								</li>
+								<li>
+									<span class="label-tit">수행 기간</span>
+									<span class="desc">2026년 03월 ~ 2026년 03월 (2주)</span>
+								</li>
+								<li>
+									<span class="label-tit">기술 스택</span>
+									<span class="desc">HTML5, CSS3(SCSS), JavaScript, GSAP, ScrollTrigger, Lenis</span>
+								</li>
+								<li>
+									<span class="label-tit">기여도</span>
+									<span class="desc">프론트엔드 및 퍼블리싱 100%</span>
+								</li>
+								<li>
+									<span class="label-tit"></span>
+									<a href="./project/03.html" class="desc view">포트폴리오 보러가기<span class="arrow">→</span></a>
+								</li>
+							</ul>
+						</div>
+						<div class="project-info">
+							<h3 class="project-title">PLAN A-Z</h3>
+							<ul class="info-list">
+								<li>
+									<span class="label-tit">고객사</span>
+									<span class="desc">플랜에이제트</span>
+								</li>
+								<li>
+									<span class="label-tit">수행 기간</span>
+									<span class="desc">2025년 11월 ~ 2025년 11월 (1주)</span>
+								</li>
+								<li>
+									<span class="label-tit">기술 스택</span>
+									<span class="desc">HTML5, CSS3(SCSS), Three.js, JavaScript, GSAP, ScrollTrigger, Lenis</span>
+								</li>
+								<li>
+									<span class="label-tit">기여도</span>
+									<span class="desc">프론트엔드 및 퍼블리싱 100%</span>
+								</li>
+								<li>
+									<span class="label-tit"></span>
+									<a href="./project/02.html" class="desc view">포트폴리오 보러가기<span class="arrow">→</span></a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="project-info">
+							<h3 class="project-title">실큰코리아</h3>
+							<ul class="info-list">
+								<li>
+									<span class="label-tit">고객사</span>
+									<span class="desc">실큰코리아</span>
+								</li>
+								<li>
+									<span class="label-tit">수행 기간</span>
+									<span class="desc">2025년 11월 ~ 2025년 11월 (4주)</span>
+								</li>
+								<li>
+									<span class="label-tit">기술 스택</span>
+									<span class="desc">Cafe24 Solution, HTML5, CSS3(SCSS), JavaScript, ScrollTrigger, Lenis</span>
+								</li>
+								<li>
+									<span class="label-tit">기여도</span>
+									<span class="desc">카페24 스킨 전면 커스터마이징 및 프론트엔드 개발 100%</span>
+								</li>
+								<li>
+									<span class="label-tit"></span>
+									<a href="./project/04.html" class="desc view">포트폴리오 보러가기<span class="arrow">→</span></a>
+								</li>
+							</ul>
+						</div>
+
+						<div class="project-info">
+							<h3 class="project-title">비스튜디오</h3>
+							<ul class="info-list">
+								<li>
+									<span class="label-tit">고객사</span>
+									<span class="desc">비스튜디오</span>
+								</li>
+								<li>
+									<span class="label-tit">수행 기간</span>
+									<span class="desc">2024년 03월 ~ 2024년 03월 (2주)</span>
+								</li>
+								<li>
+									<span class="label-tit">기술 스택</span>
+									<span class="desc">HTML5, CSS3(SCSS), JavaScript, ScrollTrigger, Lenis</span>
+								</li>
+								<li>
+									<span class="label-tit">기여도</span>
+									<span class="desc">프론트엔드 및 퍼블리싱 50%</span>
+								</li>
+								<li>
+									<span class="label-tit"></span>
+									<a href="./project/05.html" class="desc view">포트폴리오 보러가기<span class="arrow">→</span></a>
+								</li>
+							</ul>
+						</div>
+
+
+
+					</div>
+				</div>
+			</div>
+
+			<div class="bt-info-box contents-box">
+				<div class="info-tx-wr">
+					<p class="text02">학력</p>
+					<div class="company-name">
+						<div class="project-info">
+							<ul class="info-list">
+								<li>
+									<span class="label-tit">2013 ~ 2015</span>
+									<span class="desc">삼정고등학교 졸업</span>
+								</li>
+								<li>
+									<span class="label-tit">2015</span>
+									<span class="desc">동아대학교 태권도학과 입학</span>
+								</li>
+								<li>
+									<span class="label-tit">2016</span>
+									<span class="desc">동아대학교 중퇴</span>
+								</li>
+								
+							</ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!-- wrap end -->
+</body>

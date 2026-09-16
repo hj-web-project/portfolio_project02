@@ -73,9 +73,9 @@ document.addEventListener("DOMContentLoaded", () => {
 	});
 
 	gsap.ticker.lagSmoothing(0);
-//	lenis.stop();
-//	document.body.style.height = "100vh";
-//	document.body.style.overflow = "hidden";
+// lenis.stop();
+	// document.body.style.height = "100vh";
+	// document.body.style.overflow = "hidden";
 	
 
 	let mm = gsap.matchMedia();
@@ -100,8 +100,6 @@ document.addEventListener("DOMContentLoaded", () => {
 		}
 	}, "+=0.8");
 	
-	
-	
 
 
 
@@ -110,7 +108,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			scrollTrigger: {
 				trigger: "#main-contents-wr00",
 				start: "top top",
-				end: "+=150%",
+				end: "+=100%",
 				scrub: 1,
 			}
 		});
@@ -118,7 +116,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		main__act01.fromTo(
 		".main-intro-title-wr .text",
 		{ "backgroundPosition": "101% 0%" },
-		{ "backgroundPosition": "0% 0%", stagger: 0.5, duration: 2 });
+		{ "backgroundPosition": "0% 0%", stagger: 0.5, duration: 1 });
 		
 		
 		const main__act01__01 = gsap.timeline({
@@ -130,7 +128,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 
-		main__act01__01.to(".active-line", { height: "100%",ease: "none" });
+		main__act01__01.to(".active-line", { height: "100%",ease: "none"});
 	
 	}); // PC END
 
@@ -197,6 +195,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 });
+
 
 
 
