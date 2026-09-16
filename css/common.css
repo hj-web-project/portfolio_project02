@@ -163,12 +163,28 @@ body #main{color:#fff;}
 .flex-wr{ display:flex; align-items:center; justify-content: space-between; }
 .flex-wr.style02{justify-content:flex-start; gap:8px;}
 
-.char{display: inline-block; opacity: 0; transform: translateY(100px); animation: fadeDown 0.6s forwards; animation-delay: calc(4.3s + 0.1s * var(--char-index));}
+.char {
+    display: inline-block;
+    opacity: 0;
+    transform: translateY(100px);
+    animation: fadeDown 0.6s forwards;
+    animation-delay: calc(4.3s + 0.1s * var(--char-index));
+}
+
 @keyframes fadeDown {
-  to {
-	opacity: 1;
-	transform: translateY(0);
-  }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =================================================== */
+/* [재방문 시] .no-intro 클래스가 있으면 딜레이 없이 즉시 등장 */
+/* =================================================== */
+
+/* 방법 A: 딜레이 없이 바로 스르륵 올라오는 애니메이션 적용 */
+.no-intro .char {
+    animation-delay: calc(0.1s * var(--char-index)); /* 전체 대기 시간 4.3s만 제거 */
 }
 
 
@@ -199,9 +215,20 @@ background-position: 100% 0; -webkit-background-clip: text; background-clip: tex
 .main-title-wr .title{font-size:50px; color:#fff; font-weight: 500; line-height: 1.5; font-family: "Playfair Display", sans-serif; }
 
 
-#main-contents-wr00[data-scroll="in"] .main-intro-title-wr .hidden-tx{transform:translateY(0); transition-delay:4.5s; opacity:1; }
+/* [기본 / 첫 방문 시] 4.5초 대기 후 전환 */
+#main-contents-wr00[data-scroll="in"] .main-intro-title-wr .hidden-tx {
+    transform: translateY(0);
+    transition-delay: 4.5s;
+    opacity: 1;
+}
+
+body.no-intro #main-contents-wr00[data-scroll="in"] .main-intro-title-wr .hidden-tx {
+    transition-delay: 0s;
+}
 
 .main-intro-wr{position:fixed; top:0; left:0; width:100%; height:100vh; background:#000; z-index:9999;}
+.main-intro-wr.no-intro{display:none !important;}
+.main-intro-wr.is-ready{display:flex !important;}
 .main-intro-wr .fill-text{font-size:50px; font-weight: 600; position:relative;}
 .main-intro-wr .fill-text .base-text { color: rgba(255, 255, 255, 0.2); }
 .main-intro-wr .fill-text .top-text { color: #fff; position: absolute; top: 0; left: 0; width: 0; height: 100%; overflow: hidden;  white-space: nowrap;  display: block;}
@@ -419,6 +446,11 @@ position:relative; padding-left: 15px;}
 #main-contents-wr03{height:auto; padding:0 0 100px;}
 .main-contents-wr03 .stack-li-wr .stack-li .tit{font-size:18px;}
 .main-contents-wr03 .stack-li-wr .stack-li .tit:before{height:20px;}
+
+.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr .tx{font-size:16px;}
+
+.stack-group {gap:5px;}
+.stack-group span{width:6px; height:6px;}
 }/* 1024px */
 
 @media screen and (max-width:768px){
@@ -431,7 +463,7 @@ position:relative; padding-left: 15px;}
 #main-contents-wr03{padding:0 0 80px;}
 .main-contents-wr03 .stack-li-wr .stack-li .tit{font-size:16px; margin-bottom:16px;}
 .main-contents-wr03 .stack-li-wr .stack-li .tit:before{height:18px;}
-.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr .tx{margin-bottom:12px;}
+.main-contents-wr03 .stack-li-wr .stack-li .stack-group-wr .tx{margin-bottom:12px; font-size:14px;}
 }/* 570px */
 
 @media screen and (max-width:480px){
@@ -499,6 +531,10 @@ transform:translateY(100%); transition:all 0.3s ease; }
 .main-contents-wr04 .main-title-wr{margin-bottom:80px;}
 .main-contents-wr04 .main-title-wr .title{font-size:60px;}
 .ft-emailform-box textarea{height:180px;}
+
+.ft-emailform-box label{font-size:16px;}
+.ft-emailform-box input, .ft-emailform-box textarea, .ft-emailform-box select{font-size:16px;}
+.ft-emailform-box input, .ft-emailform-box select{height:40px; line-height:40px;}
 }/* 1024px */
 
 @media screen and (max-width:768px){
@@ -528,6 +564,11 @@ transform:translateY(100%); transition:all 0.3s ease; }
 .modal-content{padding:30px 20px;}
 .modal-message{font-size:14px; margin:0 0 15px 0;}
 .modal-btn{padding:8px 16px; font-size: 12px;}
+
+.ft-emailform-box label{font-size:14px;}
+.ft-emailform-box input, .ft-emailform-box textarea, .ft-emailform-box select{font-size:14px;}
+.ft-emailform-box input, .ft-emailform-box select{height:35px; line-height:35px;}
+
 }/* 570px */
 
 @media screen and (max-width:480px){
@@ -737,7 +778,7 @@ background:#000;}
 
 .project-contents-wr .project-inbox-wr:last-child > div .tx-box{margin-bottom:12px;}
 
-.sub-footer .tx01{font-size:3.5vw;}
+.sub-footer .tx01{font-size:3.2vw;}
 }/* 480px */
 
 

@@ -52,7 +52,7 @@
 	<div class="wrap">
 		<main id="main">
 			<!-- 인트로 -->
-			<div class="main-intro-wr h100-center hgt__100vh">
+			<div class="main-intro-wr h100-center hgt__100vh" style="display: none;">
 				<div class="top-tx-wr">
 					<p class="tx-style01">LEE HAE JI <br> PORTFOLIO
 					</p>
@@ -94,18 +94,20 @@
 						<h1 class="title tx__ani01" data-splitting>Who</h1>
 						<h1 class="title tx__ani01" data-splitting>I Am</h1>
 						<div class="tx-wr hidden768">
-							<div class="hidden-tx"><p class="text">웹 표준과 접근성을 준수하며, 어떤 환경에서도 결함 없는 사용자 경험을 제공하는 견고한 인터페이스를 구축합니다.</p></div>
-							<div class="hidden-tx"><p class="text">5년의 실무 경험을 통해 구조화된 마크업과 유지보수가 용이한 CSS 설계를 지향하며,</p></div>
+							<div class="hidden-tx"><p class="text">웹 표준과 접근성을 준수하며, 어떤 환경에서도 결함 없는 사용자 경험을</p></div>
+							<div class="hidden-tx"><p class="text">제공하는 견고한 인터페이스를 구축합니다. 5년의 실무 경험을 통해</p></div>
+							<div class="hidden-tx"><p class="text">구조화된 마크업과 유지보수가 용이한 CSS 설계를 지향하며,</p></div>
 							<div class="hidden-tx"><p class="text">단순한 구현을 넘어 브라우저 성능과 최적화까지 고려한 인터페이스를 만듭니다.</p></div>
 						</div>
 						
 						<div class="tx-wr visible768">
-							<div class="hidden-tx"><p class="text">웹 표준과 접근성을 준수하며, 어떤 환경에서도 결함 없는</p></div>
-							<div class="hidden-tx"><p class="text"> 사용자 경험을 제공하는 견고한 인터페이스를 구축합니다.</p></div>
-							<div class="hidden-tx"><p class="text">5년의 실무 경험을 통해 구조화된 마크업과 유지보수가 용이한 CSS 설계를 지향하며,</p></div>
-							<div class="hidden-tx"><p class="text">단순한 구현을 넘어 브라우저 성능과 최적화까지 고려한 인터페이스를 만듭니다.</p></div>
+							<div class="hidden-tx"><p class="text">웹 표준과 접근성을 준수하며, 어떤 환경에서도</p></div>
+							<div class="hidden-tx"><p class="text">결함 없는 사용자 경험을 제공하는 견고한 인터페이스를 구축합니다.</p></div>
+							<div class="hidden-tx"><p class="text">5년의 실무 경험을 통해 구조화된 마크업과 유지보수가 용이한</p></div>
+							<div class="hidden-tx"><p class="text">CSS 설계를 지향하며, 단순한 구현을 넘어 브라우저 성능과 </p></div>
+							<div class="hidden-tx"><p class="text">최적화까지 고려한 인터페이스를 만듭니다. 단순한 구현을 넘어</p></div>
+							<div class="hidden-tx"><p class="text">브라우저 성능과 최적화까지 고려한 인터페이스를 만듭니다.</p></div>
 						</div>
-						
 					</div>
 				</div>
 			</section>
@@ -642,102 +644,18 @@
 			</footer>
 			
 			
-			<script>
-				$(function() {
-					var SCRAMBLE_LETTERS = "ABCDEFGHIJKLMNOPQRSTUVWXYZ".split(""); 
-					var CHAR_DELAY = 60;  
-					var TICK_SPEED = 32;  
-
-					function getRandomChar() {
-						return SCRAMBLE_LETTERS[Math.floor(Math.random() * SCRAMBLE_LETTERS.length)];
-					}
-
-					function clearScrambleTimers($el) {
-						var timers = $el.data("scrambleTimers");
-						if (!timers) return;
-						(timers.timeouts || []).forEach(function(id) { clearTimeout(id); });
-						(timers.intervals || []).forEach(function(id) { clearInterval(id); });
-						$el.removeData("scrambleTimers");
-					}
-
-					function playScramble($el, finalText) {
-						var domElement = $el[0];
-						
-						var displayArray = finalText.split("").map(function() { return getRandomChar(); });
-
-						function render() {
-							domElement.textContent = displayArray.join("");
-						}
-						render();
-
-						var currentTimers = { timeouts: [], intervals: [] };
-
-						finalText.split("").forEach(function(targetChar, index) {
-							var timeoutId = setTimeout(function() {
-								var frame = 0;
-								var maxFrames = 3 + index * 2; 
-
-								var intervalId = setInterval(function() {
-									frame++;
-									displayArray[index] = getRandomChar();
-									render();
-
-									if (frame >= maxFrames) {
-										clearInterval(intervalId);
-										displayArray[index] = targetChar; 
-										render();
-									}
-								}, TICK_SPEED);
-
-								currentTimers.intervals.push(intervalId);
-							}, index * CHAR_DELAY);
-
-							currentTimers.timeouts.push(timeoutId);
-						});
-
-						$el.data("scrambleTimers", currentTimers);
-					}
-
-					var $scrambleTargets = $(".ft-bottom-info-wr .tit"); 
-
-					$scrambleTargets.each(function() {
-						var $tit = $(this);
-						
-						var cleanText = $tit.text().trim();
-						$tit.data("originLabel", cleanText);
-						$tit.text(cleanText); 
-
-						var currentWidth = Math.ceil($tit.outerWidth()) + 20;
-
-						$tit.css({
-							"display": "inline-block",
-							"width": currentWidth + "px",
-							"font-variant-numeric": "tabular-nums", 
-							"text-transform": "uppercase"          
-						});
-					});
-
-					$scrambleTargets.on("mouseenter", function() {
-						var $tit = $(this);
-						var label = $tit.data("originLabel");
-						if (!label) return;
-
-						clearScrambleTimers($tit);
-						playScramble($tit, label);
-					});
-
-					$scrambleTargets.on("mouseleave", function() {
-						var $tit = $(this);
-						clearScrambleTimers($tit);
-						
-						var label = $tit.data("originLabel");
-						if (label) $tit.text(label); 
-					});
-				});
-				
-			</script>
 		</main>
 	</div>
+	
+	<script>
+		$(document).ready(function() {
+			if (sessionStorage.getItem('mainIntroSeen')) {
+				document.body.classList.add('no-intro');
+			} else {
+				$('.main-intro-wr').addClass('is-ready');
+			}
+		});
+	</script>
 
 	<script>
 		$(function(){

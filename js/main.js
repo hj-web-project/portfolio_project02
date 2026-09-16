@@ -65,44 +65,66 @@ document.addEventListener("DOMContentLoaded", () => {
 	}
 
 	window.lenis = new Lenis(getLenisOptions());
-
 	window.lenis.on('scroll', ScrollTrigger.update);
 
 	gsap.ticker.add((time) => {
 		window.lenis.raf(time * 1000);
 	});
-
 	gsap.ticker.lagSmoothing(0);
-	lenis.stop();
-	document.body.style.height = "100vh";
- 	document.body.style.overflow = "hidden";
-	
 
+	// matchMedia 객체를 상위 스코프에 미리 선언
 	let mm = gsap.matchMedia();
 
-	const introTl = gsap.timeline();
+	// 2. 방문 여부 체크
+	const isVisited = sessionStorage.getItem('mainIntroSeen');
 
-    introTl
-	.to('.fill-text .top-text', {
-		width: '100%',
-		duration: 3,
-		ease: "power3.inOut"
-	})
-	
-	.to('.main-intro-wr', {
-		yPercent: -100, 
-		duration: 1,  
-		ease: "power3.inOut",
-		onComplete: () => {
-			lenis.start();
-			document.body.style.height = "";
-			document.body.style.overflow = "";
-		}
-	}, "+=0.8");
-	
+	if (isVisited) {
+		// ==========================================
+		// [재방문일 때] - 인트로 건너뛰기
+		// ==========================================
+		gsap.set('.main-intro-wr', { yPercent: -100 });
+		gsap.set('.fill-text .top-text', { width: '100%' });
+		
+		// 스크롤 즉시 허용 및 GSAP 위치 계산 새로고침
+		lenis.start();
+		ScrollTrigger.refresh();
+
+	} else {
+		// ==========================================
+		// [첫 방문일 때] - 인트로 애니메이션 실행
+		// ==========================================
+		lenis.stop();
+		document.body.style.height = "100vh";
+		document.body.style.overflow = "hidden";
+
+		const introTl = gsap.timeline();
+
+		introTl
+		.to('.fill-text .top-text', {
+			width: '100%',
+			duration: 3,
+			ease: "power3.inOut"
+		})
+		.to('.main-intro-wr', {
+			yPercent: -100, 
+			duration: 1,  
+			ease: "power3.inOut",
+			onComplete: () => {
+				lenis.start();
+				document.body.style.height = "";
+				document.body.style.overflow = "";
+				sessionStorage.setItem('mainIntroSeen', 'true');
+				
+				// 인트로 종료 후 스크롤 위치 재계산
+				ScrollTrigger.refresh();
+			}
+		}, "+=0.8");
+	} // <-- 쉼표(,) 제거됨
 
 
-
+	// ==========================================
+	// GSAP MatchMedia 동작 구역
+	// ==========================================
 	mm.add("(min-width: 1025px)", () => {
 		const main__act01 = gsap.timeline({
 			scrollTrigger: {
@@ -114,10 +136,10 @@ document.addEventListener("DOMContentLoaded", () => {
 		});
 		
 		main__act01.fromTo(
-		".main-intro-title-wr .text",
-		{ "backgroundPosition": "101% 0%" },
-		{ "backgroundPosition": "0% 0%", stagger: 0.5, duration: 1 });
-		
+			".main-intro-title-wr .text",
+			{ "backgroundPosition": "101% 0%" },
+			{ "backgroundPosition": "0% 0%", stagger: 0.5, duration: 1 }
+		);
 		
 		const main__act01__01 = gsap.timeline({
 			scrollTrigger: {
@@ -128,8 +150,8 @@ document.addEventListener("DOMContentLoaded", () => {
 			}
 		});
 
-		main__act01__01.to(".active-line", { height: "100%",ease: "none"});
-	
+		main__act01__01.to(".active-line", { height: "100%", ease: "none" });
+
 	}); // PC END
 
 	mm.add("(min-width: 769px) and (max-width: 1024px)", () => {
@@ -166,7 +188,7 @@ document.addEventListener("DOMContentLoaded", () => {
 			scrollTrigger: {
 				trigger: "#main-contents-wr00",
 				start: "top top",
-				end: "+=10%",
+				end: "+=25%",
 				scrub: 0.5,
 			}
 		});
@@ -174,7 +196,7 @@ document.addEventListener("DOMContentLoaded", () => {
 		main__act01.fromTo(
 		".main-intro-title-wr .text",
 		{ "backgroundPosition": "101% 0%" },
-		{ "backgroundPosition": "0% 0%", stagger: 0.5, duration: 0.8 });
+		{ "backgroundPosition": "0% 0%", stagger: 0.5, duration: 0.2 });
 		
 		const main__act01__01 = gsap.timeline({
 			scrollTrigger: {
