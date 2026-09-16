@@ -154,7 +154,7 @@ body { font-family: "Inter", "Pretendard", sans-serif; background:#000; color:#0
 body #main{color:#fff;}
 .PlayfairDisplay{font-family: "Playfair Display", sans-serif;}
 .wrap{ width:100%;overflow-x:hidden; }
-#main{overflow-x:hidden; width:100%:}
+#main{overflow-x:hidden; max-width:100%; width:100%; }
 .img-wr > img{ width:100%; }
 .hidden-tx{overflow:hidden;}
 .border-style{border:1px solid rgba(255, 255, 255, 0.08); border-radius:20px; overflow:hidden;}
@@ -495,11 +495,10 @@ padding:10px 24px;font-size:14px;font-weight:600;border-radius:6px;cursor:pointe
 
 .main-contents-wr04 .main-title-wr .title{font-family: 'Inter', 'Pretendard', dotum, sans-serif; font-size: 90px; line-height: 1.12; font-weight: 800;text-transform: uppercase; letter-spacing:-1px;}
 .main-contents-wr04 .main-title-wr{margin-bottom: 120px;}
-input, textarea, select{-webkit-appearance: none;-moz-appearance: none; appearance: none; }
 .ft-emailform-box input, .ft-emailform-box textarea, .ft-emailform-box select{color:#fff; border:0; border-bottom:1px solid rgba(255,255,255,0.3); width:100%; 
 background: transparent; font-size:18px; font-weight:400; border-radius: 0;}
 .ft-emailform-box input, .ft-emailform-box select{ height:54px; line-height:54px; cursor: pointer; }
-.ft-emailform-box textarea{height:250px; resize: none; word-break:keep-all;}
+.ft-emailform-box textarea{height:250px; resize: none; word-break:keep-all; padding-left:0;}
 .ft-emailform-box select option{color:#000;}
 .flex-box {width:49%;}
 .flex-box-wr{display:flex; margin-bottom:40px; gap:24px;}
@@ -763,6 +762,8 @@ background:#000;}
 @media screen and (max-width:570px){
 .sub-header .title{font-size:35px; }
 .sub-header .view-btn{font-size:16px;}
+.sub-footer{padding:32px 0 45px;}
+
 .view-btn .arrow{font-size:16px;}
 .project-contents-wr .tit{ margin-bottom: 12px;}
 .project-contents-wr .tit br{display:none;}
