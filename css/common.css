@@ -433,6 +433,7 @@ line-height: 22px; text-align: center; border-radius:24px; padding:0 12px; color
 
 
 /* section03 */
+.main-contents-wr03{padding:180px 0;}
 .main-contents-wr03 .stack-li-wr{display:flex; flex-wrap:wrap; gap:60px 30px;}
 .main-contents-wr03 .stack-li-wr .stack-li{width:calc(33.33% - 20px);}
 .main-contents-wr03 .stack-li-wr .stack-li .tit{font-size:24px; font-weight: 300; color:#fff; font-family: "Playfair Display", sans-serif; margin-bottom: 24px;
