@@ -44,22 +44,26 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else if (width <= 1024 && width > 570) {
 			// 2. 태블릿 (1024px ~ 571px)
 			return {
-				syncTouch: true, 
-				syncTouchLerp: 0.1,
-				touchMultiplier: 2,
-				wheelMultiplier: 1.4,
+				duration: 0.8,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
+				lerp: 0.1,
+				wheelMultiplier: 1.5,
 				smoothWheel: true,
+				syncTouch: true,
+				syncTouchLerp: 0.1,
+				touchMultiplier: 1.5,
 			};
 		} else {
 			// 3. 모바일 (570px 이하)
 			return {
-				syncTouch: true, 
-				syncTouchLerp: 0.1,
-				touchMultiplier: 2,
-				touchInertiaMultiplier: 10,
+				duration: 0.8,
+				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
 				lerp: 0.1,
-				wheelMultiplier: 1.4,
+				wheelMultiplier: 1.5,
 				smoothWheel: true,
+				syncTouch: true,
+				syncTouchLerp: 0.1,
+				touchMultiplier: 1.5,
 			};
 		}
 	}
@@ -221,3 +225,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
 
 
+$(window).on('scroll', function() {
+    if ($(this).scrollTop() > 0) {
+        $('.header').addClass('scroll');
+    } else {
+        $('.header').removeClass('scroll');
+    }
+});
