@@ -272,7 +272,7 @@ body.no-intro #main-contents-wr00[data-scroll="in"] .main-intro-title-wr .hidden
 @media screen and (max-width:570px){
 .header{height:70px; line-height:70px;}
 .header .main__mnav__wr a{font-size:14px;}
-.header .main__mnav__wr{gap:32px;}
+.header .main__mnav__wr{gap:0; justify-content: space-between; }
 .fixed-scroll-bottom{bottom:24px;}
 .fixed-scroll-bottom .scroll-line-wr{height:45px; margin:8px auto 0;}
 .main-intro-title-wr .text{font-size:12px;}
@@ -725,8 +725,8 @@ background:#000;}
 .sub-footer a.tx01{border-bottom:1px solid #000; display:inline-block;}
 .sub-footer .ft-link-wr{margin:12px 0 10px; display:flex; gap:12px; justify-content: center;}
 
+.main-footer.sub-footer{z-index:10; position:relative;}
 .main-footer.sub-footer a.tx01{border-bottom:1px solid #fff; }
-.main-footer.sub-footer{background:#000; z-index:10; position:relative;}
 .main-footer.sub-footer .tx01{ color:#fff;}
 
 
