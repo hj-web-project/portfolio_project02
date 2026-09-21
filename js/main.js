@@ -56,14 +56,14 @@ document.addEventListener("DOMContentLoaded", () => {
 		} else {
 			// 3. 모바일 (570px 이하)
 			return {
-				duration: 0.8,
-				easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)),
-				lerp: 0.1,
-				wheelMultiplier: 1.5,
-				smoothWheel: true,
-				syncTouch: true,
+				syncTouch: true, 
 				syncTouchLerp: 0.1,
-				touchMultiplier: 1.5,
+				touchMultiplier: 0.6,
+				touchInertiaMultiplier: 10,
+				lerp: 0.1,
+				wheelMultiplier: 0.4,
+				smoothWheel: true,
+				
 			};
 		}
 	}
